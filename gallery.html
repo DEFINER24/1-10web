@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>우리 반 갤러리</title>
+    <link rel="stylesheet" href="gallery.css">
+</head>
+<body>
+    <div class="gallery-container">
+        <header>
+            <h1>우리 반 갤러리</h1>
+        </header>
+        <main>
+            <!-- 단체 사진 -->
+            <section class="class-photo">
+                <h2>단체 학급 사진</h2>
+                <img src="./img/class.png" alt="우리 반 단체 사진">
+            </section>
+
+            <!-- 학생 개별 사진 버튼 -->
+            <section class="student-buttons">
+                <h2>학생 개별 사진 보기</h2>
+                <div class="button-group">
+                    <button onclick="showStudentPhoto('student1.jpg', '학생 1')">학생 사진</button>
+                </div>
+            </section>
+
+            <!-- 학생 사진 표시 영역 -->
+            <section class="student-photo" id="student-photo-section">
+                <h2 id="student-name">학생 사진</h2>
+                <img src="" alt="학생 사진" id="student-image">
+            </section>
+        </main>
+    </div>
+
+    <script>
+        function showStudentPhoto(imageSrc, studentName) {
+            const studentImage = document.getElementById('student-image');
+            const studentNameElement = document.getElementById('student-name');
+            studentImage.src = imageSrc;
+            studentNameElement.textContent = studentName;
+        }
+    </script>
+</body>
+</html>
